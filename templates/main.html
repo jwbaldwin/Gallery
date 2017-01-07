@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="static/css/style.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="static/css/dropzone.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="static/css/normalize.css"> <!-- Resource style -->
+  	
+	<title>Gallery</title>
+</head>
+<body>
+	<header>
+		<a href="#0" class="cd-logo"><img src="static/img/cd-logo.svg"></a>
+		<input name="add" id="add-icon" type="image" 
+					    src="static/img/plus-icon.png" 
+					    alt="Add a project!"
+					    tabindex="8"  />
+		<button class="cd-nav-trigger">Menu<span aria-hidden="true" class="cd-icon"></span></button>
+	</header>
+
+	<nav class="cd-primary-nav">
+		<ul>
+			<li class="cd-label">Navigation</li>
+			<li><a href="#0">The Photos</a></li>
+			<li><a href="#0">Contact Me</a></li>
+		</ul>
+	</nav> <!-- .cd-primary-nav -->
+	
+	<div class="cd-projects-container">
+		<ul>
+			<li class="single-project">
+				<div class="cd-title">
+					<h2>Set 1</h2>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<button class="cd-scroll">Scroll down</button>
+					
+					<div class="content-wrapper">
+					<div class="grid">
+						<!-- This will make sure our size stays right when using Masonry -->
+						<!--<div class="grid-sizer"></div>-->
+						<!-- This is what Masonry will tile for you -->
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-1.jpg" class="image">
+						</div>
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-2.jpg" class="image">
+						</div>
+
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-3.jpg" class="image">
+						</div>
+					</div>
+					<button class="image-upload">Dump Some Images</button>
+					<form action="/upload" class="dropzone" style="display: none"></form>
+				</div> <!-- .cd-project-info -->
+			</li>
+			<li class="single-project">
+				<div class="cd-title">
+					<h2>Set 2</h2>
+				</div> <!-- .cd-title -->
+
+				<div class="cd-project-info">
+					<button class="cd-scroll">Scroll down</button>
+					
+					<div class="content-wrapper">
+					<div class="grid">
+						<!-- This will make sure our size stays right when using Masonry -->
+						<!--<div class="grid-sizer"></div>-->
+						<!-- This is what Masonry will tile for you -->
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-1.jpg" class="image">
+						</div>
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-2.jpg" class="image">
+						</div>
+						<div class="grid-item">
+							<!-- An image, of course! -->
+							<img src="static/img/img-3.jpg" class="image">
+						</div>
+					</div>
+					<button class="image-upload">Dump Some Images</button>
+					<form action="/upload" method="POST" class="dropzone" style="display: none"></form>
+				</div> <!-- .cd-project-info -->
+			</li>
+		</ul>
+	</div> <!-- .cd-projects-container -->
+
+<script src="static/js/modernizr.js"></script> <!-- Modernizr -->
+<script src="static/js/dropzone.js"></script> <!-- Modernizr -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+<script src="static/js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
