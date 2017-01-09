@@ -1,11 +1,24 @@
-from random import randint
 import os
 from datetime import datetime
 from flask import Flask, render_template, jsonify, redirect, url_for, request
+from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config["DEBUG"] = True
+
+#DB connection code
+SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+    username="jwbaldwin",
+    password="pyapp123",
+    hostname="jwbaldwin.mysql.pythonanywhere-services.com",
+    databasename="jwbaldwin$galleryDB",
+)
+app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
+db = SQLAlchemy(app)	#actually create connection
+
 
 ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'nef']
 
